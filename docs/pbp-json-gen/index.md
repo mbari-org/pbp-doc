@@ -7,13 +7,14 @@
 $ pbp-json-gen --help
 ```
 ```text
-usage: pbp-json-gen [-h] --recorder {NRS,ICLISTEN,SOUNDTRAP} --json-base-dir dir --output-dir dir --uri uri --start YYYYMMDD --end YYYYMMDD
-                    --prefix PREFIX [PREFIX ...]
+usage: pbp-json-gen [-h] [--version] --recorder {NRS,ICLISTEN,SOUNDTRAP} --json-base-dir dir --output-dir dir --uri uri --start YYYYMMDD --end
+                              YYYYMMDD --prefix PREFIX [PREFIX ...]
 
-Generates JSONs with audio metadata for NRS flac files, IcListen wav files, and Soundtrap wav files from either a local directory or gs/s3 bucket.
+Generate JSONs with audio metadata for NRS flac files, IcListen wav files, and Soundtrap wav files from either a local directory or gs/s3 bucket.
 
 optional arguments:
   -h, --help            show this help message and exit
+  --version             show program's version number and exit
   --recorder {NRS,ICLISTEN,SOUNDTRAP}
                         Choose the audio instrument type
   --json-base-dir dir   JSON base directory to store the metadata

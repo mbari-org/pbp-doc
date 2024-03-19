@@ -7,13 +7,16 @@
 $ pbp --help
 ```
 ```text
-usage: pbp [-h] --json-base-dir dir [--audio-base-dir dir] [--global-attrs uri] [--set-global-attr key value] [--variable-attrs uri]
-           [--audio-path-map-prefix from~to] [--audio-path-prefix dir] --date YYYYMMDD [--voltage-multiplier value] [--sensitivity-uri file]
-           [--sensitivity-flat-value value] --output-dir dir [--output-prefix prefix] [--s3] [--gs] [--download-dir dir]
-           [--assume-downloaded-files] [--retain-downloaded-files] [--gen-csv] [--max-segments num] [--subset-to lower upper]
+usage: pbp [-h] [--version] --json-base-dir dir [--audio-base-dir dir] [--global-attrs uri] [--set-global-attr key value] [--variable-attrs uri]
+               [--audio-path-map-prefix from~to] [--audio-path-prefix dir] --date YYYYMMDD [--voltage-multiplier value] [--sensitivity-uri file]
+               [--sensitivity-flat-value value] --output-dir dir [--output-prefix prefix] [--s3] [--gs] [--download-dir dir] [--assume-downloaded-files]
+               [--retain-downloaded-files] [--gen-csv] [--max-segments num] [--subset-to lower upper]
+
+Process ocean audio data archives to daily analysis products of hybrid millidecade spectra using PyPAM.
 
 optional arguments:
   -h, --help            show this help message and exit
+  --version             show program's version number and exit
   --json-base-dir dir   JSON base directory
   --audio-base-dir dir  Audio base directory. By default, none
   --global-attrs uri    URI of JSON file with global attributes to be added to the NetCDF file.

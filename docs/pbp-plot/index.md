@@ -7,8 +7,8 @@
 $ pbp-plot --help
 ```
 ```text
-usage: pbp-plot [-h] [--latlon lat lon] [--title string] [--ylim lower upper] [--cmlim vmin vmax] [--dpi value] [--show] [--only-show]
-                netcdf [netcdf ...]
+usage: pbp-plot [-h] [--version] [--latlon lat lon] [--title string] [--ylim lower upper] [--cmlim vmin vmax] [--dpi value] [--show] [--only-show]
+               netcdf [netcdf ...]
 
 Generate summary plots for given netcdf files.
 
@@ -17,6 +17,7 @@ positional arguments:
 
 optional arguments:
   -h, --help          show this help message and exit
+  --version           show program's version number and exit
   --latlon lat lon    Lat/Lon for solar position calculation . Default: (36.7128, -122.186)
   --title string      Title for the plot. Default: 'MBARI MARS Cabled Observatory   Monterey Bay, California, USA   36.7128 °N, -122.186 °W'
   --ylim lower upper  Limits for the y-axis. Default: (10, 100000)
