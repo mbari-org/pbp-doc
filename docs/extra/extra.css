@@ -16,3 +16,8 @@ code, tt {
   /* more legible links: */
   --md-typeset-a-color: #a6c1f1;
 }
+
+.md-content {
+    /* so the content expands a bit, mainly for `program --help` outputs */
+    min-width: unset;
+}
