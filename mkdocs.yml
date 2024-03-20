@@ -35,6 +35,8 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - footnotes
+  - attr_list
+  - md_in_html
   - toc:
       permalink: True
 

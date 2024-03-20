@@ -26,3 +26,16 @@ optional arguments:
   --show              Also show the plot
   --only-show         Only show the plot (do not generate .jpg files)
 ```
+
+# Examples
+
+```shell
+pbp-plot \
+     --ylim 10 2000 \
+     --cmlim 64 108 \
+     --latlon 37.88 -123.44 \
+     --title "NOAA Ocean Noise Reference Station NRS11, Cordell Bank National Marine Sanctuary:  37.88°N, 123.44°W" \
+     NRS11/OUTPUT/NRS11_20200101.nc
+```
+
+![](../img/NRS11_20200101.jpg){ width="80%" loading=lazy }
