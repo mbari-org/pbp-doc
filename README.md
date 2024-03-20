@@ -2,7 +2,7 @@
 
 This repository contains the sources for documenting the use of `mbari-org/pbp`.
 
-Pushing changes to the repo will automatically trigger the update
+Pushing changes to this repo will automatically trigger the update
 of the generated site at <https://docs.mbari.org/internal/pbp-doc/>.
 
 ## Local development of this documentation
