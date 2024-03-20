@@ -58,10 +58,13 @@ pip install mbari-pbp
 
 The package includes the following CLI programs:
 
-- [`pbp-json-gen`](pbp-json-gen/) - Program to generate JSONs with audio metadata.
-- [`pbp`](pbp/) - Main CLI program.
-- [`pbp-cloud`](pbp-cloud/) - Program for cloud based processing. 
-- [`pbp-plot`](pbp-plot) - Plotting program.
+| Program | Description                                    |
+| ------- |------------------------------------------------|
+| [`pbp-json-gen`](pbp-json-gen/) | Generate JSON files with audio metadata.       |
+| [`pbp`](pbp/) | Main HMB generation program.                   |
+| [`pbp-cloud`](pbp-cloud/) | Program for cloud based processing.            |
+| [`pbp-plot`](pbp-plot/) | Utility program to plot resulting HMB product. |
+
  
 ## References
 
