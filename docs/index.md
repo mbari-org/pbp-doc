@@ -45,13 +45,13 @@ The only requirement is Python 3.9 or later.
 
 As a general practice, it is recommended to use a virtual environment for the installation.
 ```shell
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 ```
 
 Install the package:
 ```shell
-pip install mbari-pbp
+pip3 install mbari-pbp
 ```
 
 ## Programs
