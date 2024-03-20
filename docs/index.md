@@ -39,20 +39,28 @@ process ocean audio data archives to daily analysis products of hybrid millideca
     - [x] Inputs can be downloaded from public GCS bucket
     - [ ] Outputs can be uploaded to GCS
 
-TODO more details
-
 ## Installation
 
-    pip install mbari-pbp
+The only requirement is Python 3.9 or later.
+
+As a general practice, it is recommended to use a virtual environment for the installation.
+```shell
+python -m venv venv
+source venv/bin/activate
+```
+
+Install the package:
+```shell
+pip install mbari-pbp
+```
 
 ## Programs
 
+The package includes the following CLI programs:
+
 - [`pbp-json-gen`](pbp-json-gen/) - Program to generate JSONs with audio metadata.
-
 - [`pbp`](pbp/) - Main CLI program.
-
 - [`pbp-cloud`](pbp-cloud/) - Program for cloud based processing. 
-
 - [`pbp-plot`](pbp-plot) - Plotting program.
  
 ## References
