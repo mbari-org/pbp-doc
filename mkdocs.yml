@@ -19,6 +19,10 @@ extra_css:
 
 plugins:
   - search
+  - mkdocs-jupyter:
+      include_source: True
+      ignore_h1_titles: True
+      execute: False
   - mermaid2:
       arguments:
         theme: |
@@ -46,3 +50,4 @@ nav:
   - Main program: pbp/index.md
   - Plotting: pbp-plot/index.md
   - Cloud: pbp-cloud/index.md
+  - Notebooks: notebooks/index.md

@@ -1,3 +1,4 @@
-mkdocs-material==9.0.11
-mkdocs-mermaid2-plugin==0.6.0
+mkdocs-material
+mkdocs-mermaid2-plugin
 pymdown-extensions
+mkdocs-jupyter
