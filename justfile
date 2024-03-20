@@ -1,3 +1,6 @@
+## If you use the `just` tool (https://github.com/casey/j),
+## this file defines handy recipes for the commands indicated in the readme.
+
 # List recipes
 list:
   @just --list --unsorted
