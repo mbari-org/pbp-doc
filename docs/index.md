@@ -47,16 +47,14 @@ TODO more details
 
 ## Programs
 
-- `pbp` - Main PBP program, run `pbp --help` for usage.
+- [`pbp-json-gen`](pbp-json-gen/) - Program to generate JSONs with audio metadata.
 
-- `pbp-cloud` - Program for cloud based processing. 
-   All parameters passed via environment variables, see source file.
+- [`pbp`](pbp/) - Main CLI program.
 
-- `pbp-plot` - Plotting program: `pbp-plot.py --help`.
+- [`pbp-cloud`](pbp-cloud/) - Program for cloud based processing. 
+
+- [`pbp-plot`](pbp-plot) - Plotting program.
  
-- `pbp-json-gen` - Program to generate JSONs with audio metadata,
-  run `pbp-json-gen --help` for usage.
-
 ## References
 
 - PyPAM - Python tool for Passive Acoustic Monitoring –
