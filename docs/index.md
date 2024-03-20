@@ -45,8 +45,8 @@ The only requirement is Python 3.9 or later.
 
 As a general practice, it is recommended to use a virtual environment for the installation.
 ```shell
-python3 -m venv venv
-source venv/bin/activate
+python3.9 -m venv virtenv
+source virtenv/bin/activate
 ```
 
 Install the package:
