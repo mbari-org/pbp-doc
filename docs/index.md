@@ -31,7 +31,6 @@ process ocean audio data archives to daily analysis products of hybrid millideca
     - [x] Calibration with given flat sensitivity value
 - [x] Data products
     - [x] NetCDF with metadata
-    - [x] CSV (optional)
     - [x] Summary plot (optional)
 - [x] Cloud processing
     - [x] Inputs can be downloaded from S3
