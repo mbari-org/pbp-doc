@@ -52,7 +52,7 @@ source virtenv/bin/activate
 
 Install the package:
 ```shell
-pip3 install mbari-pbp
+pip install mbari-pbp
 ```
 
 ## Programs

@@ -10,9 +10,9 @@ of the generated site at <https://docs.mbari.org/internal/pbp-doc/>.
 Set up virtenv and install requirements:
 
 ```shell
-python3 -m venv virtenv
+python3.9 -m venv virtenv
 source virtenv/bin/activate
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 In subsequent sessions, you can activate the virtenv
