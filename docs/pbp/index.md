@@ -1,7 +1,29 @@
-!!! note
-    This is a placeholder for the documentation of the `pbp` command-line program.
+!!! danger "WIP"
 
-# Main program
+# HMB Generation
+
+`pbp` is the main program for generating the HMB product.
+It processes ocean audio data archives to daily analysis products of hybrid millidecade spectra using PyPAM.
+
+The program accepts several options.
+A typical use mainly involves the following:
+
+- `--json-base-dir`  To indicate the base directory for JSON files
+- `--date`           To indicate the date to be processed
+- `--global-attrs`   To indicate the URI of a YAML file with global attributes to be added to the NetCDF file
+- `--variable-attrs` To indicate the URI of a YAML file with attributes to associate with the variables in the NetCDF file
+- `--output-dir`     To indicate the output directory
+- `--output-prefix`  To indicate the output filename prefix
+- `--subset-to`      To indicate the subset of the resulting PSD in terms of central frequency
+
+Also, the following depending on the recorder:
+
+- `--voltage-multiplier`     Applied on the loaded signal
+- `--sensitivity-uri`        URI of sensitivity NetCDF for calibration of result
+- `--sensitivity-flat-value` Flat sensitivity value to be used for calibration
+
+
+## Usage
 
 ```shell
 $ pbp --help
@@ -10,7 +32,7 @@ $ pbp --help
 usage: pbp [-h] [--version] --json-base-dir dir [--audio-base-dir dir] [--global-attrs uri] [--set-global-attr key value] [--variable-attrs uri]
                [--audio-path-map-prefix from~to] [--audio-path-prefix dir] --date YYYYMMDD [--voltage-multiplier value] [--sensitivity-uri file]
                [--sensitivity-flat-value value] --output-dir dir [--output-prefix prefix] [--s3] [--gs] [--download-dir dir] [--assume-downloaded-files]
-               [--retain-downloaded-files] [--gen-csv] [--max-segments num] [--subset-to lower upper]
+               [--retain-downloaded-files] [--max-segments num] [--subset-to lower upper]
 
 Process ocean audio data archives to daily analysis products of hybrid millidecade spectra using PyPAM.
 
@@ -44,7 +66,6 @@ optional arguments:
                         If any destination file for a download exists, assume it was downloaded already.
   --retain-downloaded-files
                         Do not remove any downloaded files after use.
-  --gen-csv             Also generate CSV version of the result.
   --max-segments num    Test convenience: limit number of segments to process. By default, 0 (no limit).
   --subset-to lower upper
                         Subset the resulting PSD to [lower, upper), in terms of central frequency.
