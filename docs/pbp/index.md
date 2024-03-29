@@ -8,19 +8,23 @@ It processes ocean audio data archives to daily analysis products of hybrid mill
 The program accepts several options.
 A typical use mainly involves the following:
 
-- `--json-base-dir`  To indicate the base directory for JSON files
-- `--date`           To indicate the date to be processed
-- `--global-attrs`   To indicate the URI of a YAML file with global attributes to be added to the NetCDF file
-- `--variable-attrs` To indicate the URI of a YAML file with attributes to associate with the variables in the NetCDF file
-- `--output-dir`     To indicate the output directory
-- `--output-prefix`  To indicate the output filename prefix
-- `--subset-to`      To indicate the subset of the resulting PSD in terms of central frequency
+| Option            | To indicate   |
+| ----------------- |--------------- |
+| `--json-base-dir` | base directory for JSON files                                                         |
+| `--date`          | date to be processed                                                                  |
+| `--global-attrs`  | URI of a YAML file with global attributes to be added to the NetCDF file              |
+| `--variable-attrs`| URI of a YAML file with attributes to associate with the variables in the NetCDF file |
+| `--output-dir`    | output directory                                                                      |
+| `--output-prefix` | output filename prefix                                                                |
+| `--subset-to`     | subset of the resulting PSD in terms of central frequency                             |
 
 Also, the following depending on the recorder:
 
-- `--voltage-multiplier`     Applied on the loaded signal
-- `--sensitivity-uri`        URI of sensitivity NetCDF for calibration of result
-- `--sensitivity-flat-value` Flat sensitivity value to be used for calibration
+| Option                   | To indicate   |
+| ------------------------ |--------------- |
+| `--voltage-multiplier`   | applied on the loaded signal   |
+| `--sensitivity-uri`      | URI of sensitivity NetCDF for calibration of result |
+| `--sensitivity-flat-value`| flat sensitivity value to be used for calibration |
 
 
 ## Usage

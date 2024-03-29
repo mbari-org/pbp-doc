@@ -6,10 +6,12 @@ Various options are available to customize the plot.
 
 Typically, the following options are used: 
 
-- `--title`    To indicate the title for the plot
-- `--latlon`   To indicate the Lat/Lon location for solar position calculation
-- `--ylim`     To indicate the limits for the y-axis
-- `--cmlim`    To indicate `vmin`/`vmax` parameters passed to [pcolormesh]
+| Option       | To indicate   |
+| ------------ |--------------- |
+| `--title`    | Title for the plot |
+| `--latlon`   | Lat/Lon for solar position calculation |
+| `--ylim`     | Limits for the y-axis |
+| `--cmlim`    | Parameters passed to [pcolormesh] |
 
 [pcolormesh]: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib-pyplot-pcolormesh
 
@@ -21,9 +23,9 @@ pbp-plot \
      --latlon 37.88 -123.44 \
      --ylim 10 2000 \
      --cmlim 64 108 \
-     NRS11/OUTPUT/NRS11_20200101.nc
+     NRS11_20200101.nc
 ```
-should generate `NRS11/OUTPUT/NRS11_20200101.jpg` with the following plot:
+will generate `NRS11_20200101.jpg` with the following plot:
 
 ![](../img/NRS11_20200101.jpg){ width="80%" loading=lazy }
 
