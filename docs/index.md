@@ -31,17 +31,18 @@ process ocean audio data archives to daily analysis products of hybrid millideca
     - [x] Calibration with given flat sensitivity value
 - [x] Data products
     - [x] NetCDF with metadata
-    - [x] Summary plot (optional)
+    - [x] Summary plot
 - [x] Cloud processing
-    - [x] Inputs can be downloaded from S3
-    - [x] Outputs can be uploaded to S3
+    - [x] Inputs can be downloaded from and uploaded to S3
     - [x] Inputs can be downloaded from public GCS bucket
     - [ ] Outputs can be uploaded to GCS
 
 ## Installation
 
-The only requirement is Python 3.9, 3.10, or 3.11 on your environment.
+The only requirement is Python 3.9, 3.10, or 3.11 on your environment.[^1]
 You can run `python3 --version` to check the version of Python installed.
+
+[^1]: As currently [required by PyPAM](https://github.com/lifewatch/pypam/blob/29e82f0c5c6ce43b457d76963cb9d82392740654/pyproject.toml#L16).
 
 As a general practice, it is recommended to use a virtual environment for the installation.
 ```shell
