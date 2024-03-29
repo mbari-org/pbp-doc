@@ -40,7 +40,8 @@ process ocean audio data archives to daily analysis products of hybrid millideca
 
 ## Installation
 
-The only requirement is Python 3.9 or later.
+The only requirement is Python 3.9, 3.10, or 3.11 on your environment.
+You can run `python3 --version` to check the version of Python installed.
 
 As a general practice, it is recommended to use a virtual environment for the installation.
 ```shell
