@@ -1,10 +1,37 @@
-!!! note
-    This is a placeholder for the documentation of the `pbp-plot` command-line program.
+# HMB Plotting
 
-# Main program
+`pbp-plot` is a utility program to plot the resulting HMB product.
+It accepts one or more NetCDF files and generates a summary plot for each.
+Various options are available to customize the plot.
+
+Typically, the following options are used: 
+
+- `--title`    To indicate the title for the plot
+- `--latlon`   To indicate the Lat/Lon location for solar position calculation
+- `--ylim`     To indicate the limits for the y-axis
+- `--cmlim`    To indicate `vmin`/`vmax` parameters passed to [pcolormesh]
+
+[pcolormesh]: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib-pyplot-pcolormesh
+
+For example:
+
+```text
+pbp-plot \
+     --title "NOAA Ocean Noise Reference Station NRS11, Cordell Bank National Marine Sanctuary:  37.88°N, 123.44°W" \
+     --latlon 37.88 -123.44 \
+     --ylim 10 2000 \
+     --cmlim 64 108 \
+     NRS11/OUTPUT/NRS11_20200101.nc
+```
+should generate `NRS11/OUTPUT/NRS11_20200101.jpg` with the following plot:
+
+![](../img/NRS11_20200101.jpg){ width="80%" loading=lazy }
+
+
+## Usage
 
 ```shell
-$ pbp-plot --help
+pbp-plot --help
 ```
 ```text
 usage: pbp-plot [-h] [--version] [--latlon lat lon] [--title string] [--ylim lower upper] [--cmlim vmin vmax] [--dpi value] [--show] [--only-show]
@@ -27,15 +54,3 @@ optional arguments:
   --only-show         Only show the plot (do not generate .jpg files)
 ```
 
-# Examples
-
-```shell
-pbp-plot \
-     --ylim 10 2000 \
-     --cmlim 64 108 \
-     --latlon 37.88 -123.44 \
-     --title "NOAA Ocean Noise Reference Station NRS11, Cordell Bank National Marine Sanctuary:  37.88°N, 123.44°W" \
-     NRS11/OUTPUT/NRS11_20200101.nc
-```
-
-![](../img/NRS11_20200101.jpg){ width="80%" loading=lazy }
