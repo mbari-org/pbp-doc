@@ -22,13 +22,11 @@ process ocean audio data archives to daily analysis products of hybrid millideca
 
 **Status**: Functional version, including support for cloud based processing.
 
-- [x] JSON generation of timekeeping
-- [x] Timekeeping based on given JSON indicating start and duration of every available (recognized) sound file
+- [x] JSON generation of timekeeping with indication of start and duration of recognized sound files
 - [x] Audio file processing
     - [x] Frequency and psd array output
     - [x] Concatenation of processed 1-minute segments for daily product
-    - [x] Calibration with given sensitivity file (NetCDF)
-    - [x] Calibration with given flat sensitivity value
+    - [x] Calibration with given sensitivity file (NetCDF), or flat sensitivity value
 - [x] Data products
     - [x] NetCDF with metadata
     - [x] Summary plot
