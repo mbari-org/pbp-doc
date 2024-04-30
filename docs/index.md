@@ -2,16 +2,9 @@
 description: Process ocean audio data archives to daily analysis products of hybrid millidecade spectra using PyPAM.
 ---
 
-!!! note
-    Initially, the idea is to capture how we have been using PBP in various exercises
-    performed during the development of PBP itself.
-    For development convenience, such exercises have been described in the PBP repository,
-    but such description should probably be moved from there to this site.
-    
-    So, the initial focus here is to maintain an _internal_ documentation site, especially
-    given the various locations that are only internal to MBARI in some exercises.
-    
-    Eventually, there would also be a public-facing documentation site that would be more general. 
+!!! note "WIP"
+    Thanks for your interest in PBP. This documentation is still a work in progress.
+    Please get in touch if you have any questions or suggestions.
 
 # MBARI PBP
 
@@ -19,6 +12,8 @@ The [`mbari-pbp`](https://pypi.org/project/mbari-pbp/) package allows to
 process ocean audio data archives to daily analysis products of hybrid millidecade spectra using
 [PyPAM](https://github.com/lifewatch/pypam/).
 
+You can use PBP by directly running the included CLI the programs,
+as well as a dependency in your own Python code.
 
 **Status**: Functional version, including support for cloud based processing.
 
@@ -37,7 +32,10 @@ process ocean audio data archives to daily analysis products of hybrid millideca
 
 ## Installation
 
-The only requirement is Python 3.9, 3.10, or 3.11 on your environment.[^1]
+On your environment the only requirement is Python 3.9, 3.10, or 3.11.[^1]
+Make sure your Python installation includes the `pip` and `venv` modules,
+or install them separately as needed.
+
 You can run `python3 --version` to check the version of Python installed.
 
 [^1]: As currently [required by PyPAM](https://github.com/lifewatch/pypam/blob/29e82f0c5c6ce43b457d76963cb9d82392740654/pyproject.toml#L16).
@@ -76,7 +74,3 @@ The package includes the following CLI programs:
   <https://asa.scitation.org/doi/10.1121/10.0003324>
 - Erratum: Hybrid millidecade spectra –
   <https://asa.scitation.org/doi/10.1121/10.0005818>
-
-## Development
-
-See [DEVELOPMENT.md](https://github.com/mbari-org/pypam-based-processing/blob/main/DEVEL.md) for details.

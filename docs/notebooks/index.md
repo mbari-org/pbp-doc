@@ -3,4 +3,4 @@
 
 # Notebooks
 
-- [PBP-NRS11-batch.ipynb](PBP-NRS11-batch.ipynb)
+- [PBP-NRS11-batch.ipynb](https://colab.research.google.com/drive/1RaFVZzdRt88gY1SR_J34XMdRLgBjEdI-)

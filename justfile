@@ -10,13 +10,18 @@ setup:
   #!/usr/bin/env bash
   python3 -m venv virtenv
   source virtenv/bin/activate
-  just install-requirements
+  just install
 
 # Run this if there are new requirements
-install-requirements:
+install:
   #!/usr/bin/env bash
   source virtenv/bin/activate
   pip3 install -r requirements.txt
+
+uninstall *args="":
+  #!/usr/bin/env bash
+  source virtenv/bin/activate
+  pip3 uninstall {{args}}
 
 # mkdocs serve
 serve:
