@@ -3,7 +3,7 @@ description: Process ocean audio data archives to daily analysis products of hyb
 ---
 
 !!! note "WIP"
-    Thanks for your interest in PBP. This documentation is still a work in progress.
+    Thanks for your interest in PBP. This documentation is still a work in progress :construction:.
     Please get in touch if you have any questions or suggestions.
 
 # MBARI PBP
@@ -49,6 +49,15 @@ source virtenv/bin/activate
 Install the package:
 ```shell
 pip install mbari-pbp
+```
+
+## Advanced Installation
+
+If you want to install the package from source and have already installed with the `pip install mbari-pbp` command,
+you can install the package from source with the following command. This will get the latest version :construction: from the main branch.
+
+```shell
+pip install --no-cache-dir --force-reinstall  git+https://github.com/mbari-org/pbp.git
 ```
 
 ## Programs
