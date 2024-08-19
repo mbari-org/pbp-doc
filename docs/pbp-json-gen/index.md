@@ -27,6 +27,10 @@ The data must be stored in a public cloud storage bucket; private buckets are no
 
 # Examples
 
+!!! note prefix
+    The prefix for any file, is the string that is used to match the beginning of the file name before the timestamp. For example, if the file name is `ONMS_FK01_7412_20230315_000000.wav`,
+    the prefix would be `ONMS_FK01_7412_`, `NRS11_20191024_022220.flac` would have a prefix of `NRS11_`, and `MARS_20220902_000000.wav` would have a prefix of `MARS_`.
+
 ## Generate JSONs with audio metadata from NRS flac files for a date range
 
 The following command generates JSON files  in the `json/nrs` directory only for files in  `gs://noaa-passive-bioacoustic/nrs/audio/11/nrs_11_2019-2021/audio` 
@@ -58,8 +62,9 @@ output/
 
 ## Generate JSONs with audio metadata from IcListen wav files for a date range
 
-The following command generates JSON files in the `json/iclisten` directory only for files in `s3://pacific-sound-256khz` that include the file string MARS. Logs will be stored in the `output` directory, for the specified date range.
-The MARS data is recorded in 10-minute intervals, so there are many files to process.  This would be a good time to go get a cup of coffee :coffee:
+The following command generates JSON files in the `json/iclisten` directory only for files in `s3://pacific-sound-256khz` that include the file string MARS. 
+Logs will be stored in the `output` directory, for the specified date range. The MARS data is recorded in 10-minute intervals, so there are many files to process.  
+This would be a good time to go get a cup of coffee :coffee:
 
 ```shell
 pbp-json-gen --recorder=ICLISTEN \
