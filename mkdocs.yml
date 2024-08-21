@@ -52,7 +52,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - JSON generation: pbp-json-gen/index.md
+  - Meta generation: pbp-meta-gen/index.md
   - HMB generation: pbp/index.md
   - Plotting: pbp-plot/index.md
   - Cloud: pbp-cloud/index.md

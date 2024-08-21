@@ -1,4 +1,4 @@
-The `pbp-json-gen` command-line program is used to generate JSON files with audio metadata. This is a necessary step 
+The `pbp-meta-gen` command-line program is used to generate JSON files with audio metadata. This is a necessary step 
 before running the main HMB generation program to extract and optionally correct the time data.   
 
 Instructions  below assume you have already installed the package,
@@ -29,7 +29,20 @@ The data must be stored in a public cloud storage bucket; private buckets are no
 
 !!! note prefix
     The prefix for any file, is the string that is used to match the beginning of the file name before the timestamp. For example, if the file name is `ONMS_FK01_7412_20230315_000000.wav`,
-    the prefix would be `ONMS_FK01_7412_`, `NRS11_20191024_022220.flac` would have a prefix of `NRS11_`, and `MARS_20220902_000000.wav` would have a prefix of `MARS_`.
+    the prefix would be `ONMS_FK01_7412_` or `ONMS_FK01_7412`, `NRS11_20191024_022220.flac` would have a prefix of `NRS11_`, and 
+    `MARS_20220902_000000.wav` would have a prefix of `MARS_` or `MARS`.
+     
+    There is flexible handling of the timestamp in the file name, so any of following file names are all valid:
+
+    ```
+        NRS11_20191024_022220.flac
+        NRS11_191024T022220Z.flac
+        NRS11_20191024T022220Z.wav
+        NRS11_20191024022220.wav
+        NRS11_20191024T022220Z.d100.x.wav
+        NRS11_191024T022220Z.d100.x.wav
+    ```
+
 
 ## Generate JSONs with audio metadata from NRS flac files for a date range
 
@@ -38,13 +51,13 @@ that iclude the file string NRS11. Logs will be stored in the `output` directory
  
 
 ```shell
-pbp-json-gen --recorder=NRS \
+pbp-meta-gen --recorder=NRS \
              --json-base-dir=json/nrs \
              --output-dir=output \
              --uri=gs://noaa-passive-bioacoustic/nrs/audio/11/nrs_11_2019-2021/audio \
              --start=20191023 \
              --end=20191024 \
-             --prefix=NRS11
+             --prefix=NRS11_
 ```
 
 Following this command, you should see two JSON files in the `json/nrs` directory; one for each day of the date range.
@@ -67,7 +80,7 @@ Logs will be stored in the `output` directory, for the specified date range. The
 This would be a good time to go get a cup of coffee :coffee:
 
 ```shell
-pbp-json-gen --recorder=ICLISTEN \
+pbp-meta-gen --recorder=ICLISTEN \
              --json-base-dir=json/iclisten \
              --output-dir=output \
              --uri=s3://pacific-sound-256khz \
@@ -91,7 +104,7 @@ output/
 ## Generate JSONs with audio metadata from Soundtrap wav files for a date range
 
 ```shell
-pbp-json-gen --recorder=SOUNDTRAP \
+pbp-meta-gen --recorder=SOUNDTRAP \
             --json-base-dir=json/FK01 \
             --output-dir=logs/json/FK01 \
             --uri=file://Volumes/PAM_Archive/FK01 \
@@ -132,10 +145,10 @@ The JSON file schema is as follows:
 # Need help? Try the --help option 
 
 ```shell
-$ pbp-json-gen --help
+$ pbp-meta-gen --help
 ```
 ```text
-usage: pbp-json-gen [-h] [--version] --recorder {NRS,ICLISTEN,SOUNDTRAP} --json-base-dir dir --output-dir dir --uri uri --start YYYYMMDD --end YYYYMMDD --prefix PREFIX [PREFIX ...]
+usage: pbp-meta-gen [-h] [--version] --recorder {NRS,ICLISTEN,SOUNDTRAP} --json-base-dir dir --output-dir dir --uri uri --start YYYYMMDD --end YYYYMMDD --prefix PREFIX [PREFIX ...]
 
 Generate JSONs with audio metadata for NRS flac files, IcListen wav files, and Soundtrap wav files from either a local directory or gs/s3 bucket.
 
@@ -153,7 +166,7 @@ options:
                         Prefix for search to match the audio files. Assumption is the prefix is separated by an underscore, e.g. 'MARS_'.
 
 Examples:
-    pbp-json-gen \
+    pbp-meta-gen \
                  --json-base-dir=tests/json/nrs \
                  --output-dir=output \
                  --uri=s3://pacific-sound-ch01 \

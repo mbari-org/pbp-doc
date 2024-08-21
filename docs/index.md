@@ -15,9 +15,11 @@ process ocean audio data archives to daily analysis products of hybrid millideca
 You can use PBP by directly running the included CLI the programs,
 as well as a dependency in your own Python code.
 
-**Status**: Functional version, including support for cloud based processing.
-
-- [x] JSON generation of timekeeping with indication of start and duration of recognized sound files
+**Features**:
+  
+- [x] Audio metadata extraction for managed timekeeping 
+    - [x] Start and duration of recognized wav and flac sound files either locally or in cloud (JSON)
+    - [x] Coverage plot of sound recordings
 - [x] Audio file processing
     - [x] Frequency and psd array output
     - [x] Concatenation of processed 1-minute segments for daily product
@@ -64,12 +66,12 @@ pip install --no-cache-dir --force-reinstall  git+https://github.com/mbari-org/p
 
 The package includes the following CLI programs:
 
-| Program | Description                                    |
-| ------- |------------------------------------------------|
-| [`pbp-json-gen`](pbp-json-gen/) | Generate JSON files with audio metadata.       |
-| [`pbp`](pbp/) | Main HMB generation program.                   |
-| [`pbp-cloud`](pbp-cloud/) | Program for cloud based processing.            |
-| [`pbp-plot`](pbp-plot/) | Utility program to plot resulting HMB product. |
+| Program                         | Description                                    |
+|---------------------------------|------------------------------------------------|
+| [`pbp-meta-gen`](pbp-meta-gen/) | Generate JSON files with audio metadata.       |
+| [`pbp`](pbp/)                   | Main HMB generation program.                   |
+| [`pbp-cloud`](pbp-cloud/)       | Program for cloud based processing.            |
+| [`pbp-plot`](pbp-plot/)         | Utility program to plot resulting HMB product. |
 
  
 ## References
