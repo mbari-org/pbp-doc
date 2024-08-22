@@ -4,7 +4,7 @@ before running the main HMB generation program to extract and optionally correct
 Instructions  below assume you have already installed the package,
 e.g. `pip install pbp`.  Once this is done, you can proceed to the main program [pbp](../pbp).
 
-# Overview
+## Overview
 
 Three types of audio recorders are supported: NRS, IcListen, and Soundtrap files. Here is the current supported matrix:
 
@@ -25,7 +25,7 @@ The data must be stored in a public cloud storage bucket; private buckets are no
 !!! tip end "Note the triple slash after the prefix for a local archive file:///Volumes. This is required for the URI to be parsed correctly."
 
 
-# Examples
+## Examples
 
 !!! note prefix
     The prefix for any file, is the string that is used to match the beginning of the file name before the timestamp. For example, if the file name is `ONMS_FK01_7412_20230315_000000.wav`,
@@ -113,7 +113,7 @@ pbp-meta-gen --recorder=SOUNDTRAP \
             --prefix=ONMS_FK01_7412
 ```
 
-# JSON format
+## JSON format
 
 !!! note "Why JSON?"
     We choose JSON files to store the metadata because it is human-readable, easy to parse, and can be easily integrated as part of a 
@@ -142,7 +142,7 @@ The JSON file schema is as follows:
 ]
 ```
 
-# Need help? Try the --help option 
+## Need help? Try the --help option 
 
 ```shell
 $ pbp-meta-gen --help
