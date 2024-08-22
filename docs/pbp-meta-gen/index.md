@@ -1,6 +1,10 @@
 The `pbp-meta-gen` command-line program is used to generate JSON files with audio metadata. This is a necessary step 
 before running the main HMB generation program to extract and optionally correct the time data.   
 
+This also generates an overview of the recording coverage for the specified date range which
+can be used to identify gaps in the data, help with the selection of the data to be processed,
+or to identify any issues with the data before processing.
+
 Instructions  below assume you have already installed the package,
 e.g. `pip install pbp`.  Once this is done, you can proceed to the main program [pbp](../pbp).
 
@@ -21,7 +25,7 @@ The data must be stored in a public cloud storage bucket; private buckets are no
 
 - For Google Storage, use the gs: prefix, e.g. `gs://noaa-passive-bioacoustic/nrs/audio/11/nrs_11_2019-2021/audio`.
 - For AWS S3, use the s3: prefix, e.g. `s3://pacific-sound-256khz`. 
-- For local files, the URI is the path to the directory where the audio files are stored with the file: prefix, e.g. `file:///Volumes/PAM_Archive/FK01`.
+- For local files, the URI is the path to the directory where the audio files are stored with the file: prefix, e.g. `file:///Volumes/PAM_Archive/FK01`, or  `file:\\Users\dcline\PAM_Archive\FK01`
 !!! tip end "Note the triple slash after the prefix for a local archive file:///Volumes. This is required for the URI to be parsed correctly."
 
 
@@ -60,6 +64,17 @@ pbp-meta-gen --recorder=NRS \
              --prefix=NRS11_
 ```
 
+If your data is stored locally on Windows, e.g. in your `\Users\dcline\Downloads` directory, the command might look something like:
+
+```shell
+pbp-meta-gen --recorder NRS --json-base-dir=json/nrs \
+             --output-dir=output \
+             --uri= file:\\Users\dcline\Downloads\ \
+             --start=20191023 \
+             --end=20191024 \
+             --prefix=NRS11_
+```
+
 Following this command, you should see two JSON files in the `json/nrs` directory; one for each day of the date range.
 
 ```text
@@ -77,7 +92,9 @@ output/
 
 The following command generates JSON files in the `json/iclisten` directory only for files in `s3://pacific-sound-256khz` that include the file string MARS. 
 Logs will be stored in the `output` directory, for the specified date range. The MARS data is recorded in 10-minute intervals, so there are many files to process.  
-This would be a good time to go get a cup of coffee :coffee:
+
+This would be a good time to go get a cup of coffee :coffee:. This will take a while to process since
+the pacific sound archive has many files.
 
 ```shell
 pbp-meta-gen --recorder=ICLISTEN \
