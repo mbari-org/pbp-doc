@@ -54,6 +54,6 @@ nav:
   - Home: index.md
   - Meta Generation: pbp-meta-gen/index.md
   - HMB Generation: pbp-hmb-gen/index.md
-  - HMB Plotting: pbp-plot/index.md
+  - HMB Plotting: pbp-hmb-plot/index.md
   - Cloud: pbp-cloud/index.md
   - Notebooks: notebooks/index.md

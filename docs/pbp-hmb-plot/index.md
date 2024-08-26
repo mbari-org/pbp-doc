@@ -1,6 +1,6 @@
 # HMB Plotting
 
-`pbp-plot` is a utility program to plot the resulting HMB product.
+`pbp-hmb-plot` is a utility program to plot the resulting HMB product.
 It accepts one or more NetCDF files and generates a summary plot for each.
 Various options are available to customize the plot.
 
@@ -18,7 +18,7 @@ Typically, the following options are used:
 For example:
 
 ```text
-pbp-plot \
+pbp-hmb-plot \
      --title "NOAA Ocean Noise Reference Station NRS11, Cordell Bank National Marine Sanctuary:  37.88°N, 123.44°W" \
      --latlon 37.88 -123.44 \
      --ylim 10 2000 \
@@ -33,10 +33,10 @@ will generate `NRS11_20200101.jpg` with the following plot:
 ## Usage
 
 ```shell
-pbp-plot --help
+pbp-hmb-plot --help
 ```
 ```text
-usage: pbp-plot [-h] [--version] [--latlon lat lon] [--title string] [--ylim lower upper] [--cmlim vmin vmax] [--dpi value] [--show] [--only-show]
+usage: pbp-hmb-plot [-h] [--version] [--latlon lat lon] [--title string] [--ylim lower upper] [--cmlim vmin vmax] [--dpi value] [--show] [--only-show]
                netcdf [netcdf ...]
 
 Generate summary plots for given netcdf files.

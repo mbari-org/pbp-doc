@@ -77,7 +77,7 @@ The package includes the following CLI programs:
 | [`pbp-meta-gen`](pbp-meta-gen/) | Generate JSON files with audio metadata.       |
 | [`pbp-hmb-gen`](pbp-hmb-gen/)   | Main HMB generation program.                   |
 | [`pbp-cloud`](pbp-cloud/)       | Program for cloud based processing.            |
-| [`pbp-plot`](pbp-plot/)         | Utility program to plot resulting HMB product. |
+| [`pbp-hmb-plot`](pbp-hmb-plot/) | Utility program to plot resulting HMB product. |
 
  
 ## References
