@@ -53,6 +53,12 @@ Install the package:
 pip install mbari-pbp
 ```
 
+!!! note ""
+    If you are upgrading from a previous version, you can use the following command:
+    ```shell
+    pip install --upgrade mbari-pbp
+    ```
+
 ## Advanced Installation
 
 If you want to install the package from source and have already installed with the `pip install mbari-pbp` command,
@@ -69,7 +75,7 @@ The package includes the following CLI programs:
 | Program                         | Description                                    |
 |---------------------------------|------------------------------------------------|
 | [`pbp-meta-gen`](pbp-meta-gen/) | Generate JSON files with audio metadata.       |
-| [`pbp`](pbp/)                   | Main HMB generation program.                   |
+| [`pbp-hmb-gen`](pbp-hmb-gen/)   | Main HMB generation program.                   |
 | [`pbp-cloud`](pbp-cloud/)       | Program for cloud based processing.            |
 | [`pbp-plot`](pbp-plot/)         | Utility program to plot resulting HMB product. |
 

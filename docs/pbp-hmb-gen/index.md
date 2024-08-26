@@ -2,7 +2,7 @@
 
 # HMB Generation
 
-`pbp` is the main program for generating the HMB product.
+`pbp-hmb-gen` is the main program for generating the HMB product.
 It processes ocean audio data archives to daily analysis products of hybrid millidecade spectra using PyPAM.
 
 The program accepts several options.
@@ -30,12 +30,12 @@ Also, the following depending on the recorder:
 ## Usage
 
 ```shell
-$ pbp --help
+$ pbp-hmb-gen --help
 ```
 ```text
-usage: pbp [-h] [--version] --json-base-dir dir [--audio-base-dir dir] [--global-attrs uri] [--set-global-attr key value] [--variable-attrs uri]
+usage: pbp-hmb-gen [-h] [--version] --json-base-dir dir [--audio-base-dir dir] [--global-attrs uri] [--set-global-attr key value] [--variable-attrs uri]
                [--audio-path-map-prefix from~to] [--audio-path-prefix dir] --date YYYYMMDD [--voltage-multiplier value] [--sensitivity-uri file]
-               [--sensitivity-flat-value value] --output-dir dir [--output-prefix prefix] [--s3] [--gs] [--download-dir dir] [--assume-downloaded-files]
+               [--sensitivity-flat-value value] --output-dir dir [--output-prefix prefix] [--s3] [--s3-unsigned] [--gs] [--download-dir dir] [--assume-downloaded-files]
                [--retain-downloaded-files] [--max-segments num] [--subset-to lower upper]
 
 Process ocean audio data archives to daily analysis products of hybrid millidecade spectra using PyPAM.
@@ -63,8 +63,8 @@ optional arguments:
   --output-dir dir      Output directory
   --output-prefix prefix
                         Output filename prefix
-  --s3                  s3 access involved.
-  --gs                  gs access involved.
+  --s3                  s3 access is involved, possibly with required credentials.
+  --s3-unsigned         s3 access is involved, not requiring credentials.
   --download-dir dir    Directory for any downloads (e.g., when s3 or gs is involved).
   --assume-downloaded-files
                         If any destination file for a download exists, assume it was downloaded already.
@@ -75,7 +75,7 @@ optional arguments:
                         Subset the resulting PSD to [lower, upper), in terms of central frequency.
 
 Examples:
-    pbp --json-base-dir=tests/json \
+    pbp-hmb-gen --json-base-dir=tests/json \
         --audio-base-dir=tests/wav \
         --date=20220902 \
         --output-dir=output
