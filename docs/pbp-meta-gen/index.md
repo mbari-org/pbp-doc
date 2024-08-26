@@ -6,7 +6,8 @@ can be used to identify gaps in the data, help with the selection of the data to
 or to identify any issues with the data before processing.
 
 Instructions  below assume you have already installed the package,
-e.g. `pip install pbp`.  Once this is done, you can proceed to the main program [pbp](../pbp).
+e.g. `pip install mbari-pbp`.
+Once this is done, you can proceed to the main program [pbp-hmb-gen](../pbp-hmb-gen).
 
 ## Overview
 
