@@ -1,27 +1,20 @@
 # README
 
-This repository contains the sources for documenting the use of `mbari-org/pbp`.
+This repository contains the sources for documenting the use of
+[`mbari-org/pbp`](https://pypi.org/project/mbari-pbp/).
 
 Pushing changes to this repo will automatically trigger the update
 of the generated site at <https://docs.mbari.org/pbp/>.
 
-## Local development of this documentation
+### Local doc development
 
-Set up virtenv and install requirements:
-
-```shell
-python3.9 -m venv virtenv
-source virtenv/bin/activate
-pip install -r requirements.txt
+One-off setup:
+```bash
+just setup
 ```
 
-In subsequent sessions, you can activate the virtenv
-and serve the site locally with:
-```shell
-source virtenv/bin/activate
-virtenv/bin/mkdocs serve
+Then:
+```bash
+just serve
 ```
-
-Then open http://127.0.0.1:8000/.
-Changes that you make to the documentation source files
-should automatically get reflected in the browser as you save the files.
+and open the indicated URL in your browser.

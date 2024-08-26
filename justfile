@@ -27,4 +27,15 @@ uninstall *args="":
 serve:
   #!/usr/bin/env bash
   source virtenv/bin/activate
-  virtenv/bin/mkdocs serve
+  just _serve_dyn_port
+
+# (mkdocs does not support indicating a dynamic port)
+# Get an available port and run `mkdoc serve -a` with it
+_serve_dyn_port:
+    #!/usr/bin/env python
+    import socket
+    import subprocess
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind(('', 0))
+        port = s.getsockname()[1]
+    subprocess.run(['virtenv/bin/mkdocs', 'serve', '-a', f'localhost:{port}'])
