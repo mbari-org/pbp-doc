@@ -52,8 +52,8 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Meta generation: pbp-meta-gen/index.md
-  - HMB generation: pbp/index.md
-  - Plotting: pbp-plot/index.md
+  - Meta Generation: pbp-meta-gen/index.md
+  - HMB Generation: pbp/index.md
+  - HMB Plotting: pbp-plot/index.md
   - Cloud: pbp-cloud/index.md
   - Notebooks: notebooks/index.md
