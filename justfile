@@ -6,11 +6,14 @@ list:
   @just --list --unsorted
 
 # Set up virtenv, install requirements
-setup:
+setup: clean
   #!/usr/bin/env bash
   python3 -m venv virtenv
   source virtenv/bin/activate
   just install
+
+clean:
+    rm -rf virtenv
 
 # Run this if there are new requirements
 install:
